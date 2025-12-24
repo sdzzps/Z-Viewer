@@ -1,5 +1,8 @@
-# Z-Viewer
-<p align="center">
+<h1 align="center">
   <img src="assets/ZViewerIcon.png" width="200">
-</p>
-A metadata viewer for multi-media files and more, based on ExifTool. 
+  <br>
+    Z Viewer
+</h1>
+
+<h4 align="center">
+A metadata viewer for multi-media files and more 
