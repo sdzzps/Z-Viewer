@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>resources/box.svg</file>
+        <file>resources/close.svg</file>
+        <file>resources/minimize.svg</file>
+        <file>resources/remove.svg</file>
+        <file>resources/stack.svg</file>
+        <file>resources/search.svg</file>
+        <file>resources/compress.svg</file>
+        <file>resources/collapse.svg</file>
+        <file>resources/up.svg</file>
+        <file>resources/bottomClosed.svg</file>
+        <file>resources/tag_black.svg</file>
+        <file>resources/tag_white.svg</file>
+        <file>resources/value_black.svg</file>
+        <file>resources/value_white.svg</file>
+        <file>resources/import.svg</file>
+        <file>resources/folder_open.svg</file>
+        <file>resources/copy.svg</file>
+        <file>resources/paste.svg</file>
+        <file>resources/clear_cache.svg</file>
+        <file>resources/ZViewerIcon1_2.png</file>
+    </qresource>
+    <qresource prefix="/"/>
+    <qresource prefix="/fonts">
+        <file>resources/Segoe UI.ttf</file>
+        <file>resources/SourceHanSansSC-Normal-2.otf</file>
+        <file>resources/Roboto-VariableFont_wdth,wght.ttf</file>
+    </qresource>
+</RCC>

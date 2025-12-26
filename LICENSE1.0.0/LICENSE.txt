@@ -1,0 +1,19 @@
+Z Viewer 1.0.0
+Copyright (c) 2025 sdzzps
+Released: 2025-12-27
+
+This work is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+You may not use this software for commercial purposes without
+prior written permission from the author.
+
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+本软件采用 CC BY-NC-SA 4.0 许可协议发布。
+允许免费使用、下载、修改和二次创作。
+禁止商业用途，任何商业使用必须获得作者 sdzzps 的事先书面授权。
+二次创作必须以同样的协议共享并注明原作者。
+
+版权所有 (c) 2025 sdzzps
