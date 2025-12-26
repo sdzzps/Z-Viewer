@@ -67,10 +67,10 @@ Z Viewer provides a simple and modern graphic user interface, allowing users to 
   | ----------------------------------- | ------------------------------------- |
   |Windows version|“…\ZViewer\toolsˮ|
   |Mac OS versions|“…/ZViewer.app/Contents/Resources/toolsˮ|
-<br>
+  
   For a self-compiled Z Viewer program, users need to manually put a copy of ExifTool in tools directory. <br>
   Users can also upgrade the ExifTool program by replacing its files in tools directory with newer releases from [the official website](https://exiftool.org/).
-<br>
+
   When Z Viewer is unable to locate the built-in ExifTool, it will try using ExifTool from the system PATH, if exists, as a fallback. <br>
 
 ## Technical Overview
@@ -133,3 +133,4 @@ Commercial use of Z Viewer or derivative works is prohibited without prior writt
 
 
   For commercial licensing inquiries, please contact us by [submitting an issue](https://github.com/sdzzps/Z-Viewer/issues). 
+
