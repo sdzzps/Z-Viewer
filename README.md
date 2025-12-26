@@ -115,8 +115,8 @@ Z Viewer is developed using Qt Quick (QML) and C++, using IDEs Qt Creator commun
 Fonts used in the UI: [Inter](https://fonts.google.com/specimen/Inter), [Roboto](https://fonts.google.com/specimen/Roboto), [Source Han Sans](https://github.com/adobe-fonts/source-han-sans). 
 Icons used in the UI: [Material Symbols & Icons](https://fonts.google.com/icons).
 
-Many thanks to JZ and Yang H. for providing technical insights and feedback during the development of this project. <br>
-Thanks to WHJ for the help in compiling the Mac OS ARM release version. <br>
+Many thanks to JZ and Yang H. for providing technical insights and feedback during the development of this project.  
+Thanks to WHJ for the help in compiling the Mac OS ARM release version.  
 Thanks to Kai Taisa for providing sample images for testing. 
 
 
@@ -133,5 +133,6 @@ Commercial use of Z Viewer or derivative works is prohibited without prior writt
 
 
   For commercial licensing inquiries, please contact us by [submitting an issue](https://github.com/sdzzps/Z-Viewer/issues). 
+
 
 
