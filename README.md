@@ -69,7 +69,7 @@ Z Viewer provides a simple and modern graphic user interface, allowing users to 
   |Mac OS versions|“…/ZViewer.app/Contents/Resources/toolsˮ|
 <br>
   For a self-compiled Z Viewer program, users need to manually put a copy of ExifTool in tools directory. <br>
-  Users can also upgrade the ExifTool program by replacing its files in tools directory with newer releases from [the official website](https://exiftool.org/). <br>
+  Users can also upgrade the ExifTool program by replacing its files in tools directory with newer releases from [the official website](https://exiftool.org). <br>
   When Z Viewer is unable to locate the built-in ExifTool, it will try using ExifTool from the system PATH, if exists, as a fallback. <br>
 
 ## Technical Overview
