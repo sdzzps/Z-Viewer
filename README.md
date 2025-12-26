@@ -87,7 +87,7 @@ Z Viewer provides a simple and modern graphic user interface, allowing users to 
   <p align="center">
     <img src="assets/ZViewerDiagram.png" width="1000">
   </p>
-The Z Viewer application consists of 3 major parts in development: Data Pipelines and Models, Thumbnail Pipelines, and UI Modules. 
+The Z Viewer application consists of 3 major parts in development: [Data Pipelines and Models](https://github.com/sdzzps/Z-Viewer?tab=readme-ov-file#data-pipelines-and-models), [Thumbnail Pipelines](https://github.com/sdzzps/Z-Viewer?tab=readme-ov-file#thumbnail-pipelines), and [UI Modules](https://github.com/sdzzps/Z-Viewer?tab=readme-ov-file#ui-modules). 
 
 #### Data Pipelines and Models
 
