@@ -13,7 +13,7 @@ Based on <a href="https://exiftool.org/">ExifTool By Phil Harvey</a>.
 ## Introduction
 Z Viewer is a metadata viewer for multi-media files [and more](https://exiftool.org/#supported). It is a free, open source, cross platform desktop application developed with C++ and Qt QML. <br>
 It is designed for content creators who want to check metadata of media files. For example, photographers may want to check exposure settings and codec of video footages as a reference for post-production. These metadata are encoded in the files, but different manufacturers have different formats, thus operating system file managers and editing software may not be able to display them. <br>
-Z Viewer provides a simple and modern graphic user interface, allowing users to leverage the power of [ExifTool](https://exiftool.org/) without dealing with the abstract of command-lines. It also provides thumbnails, keyword searching, drag-and-drop, and other features to make the workflow more intuitive and efficient.<br>
+Z Viewer provides a simple and modern graphic user interface, allowing users to leverage the power of [ExifTool](https://exiftool.org/) without dealing with the abstract of command-lines. It also provides thumbnails, keyword searching, drag-and-drop, and other features to make the workflow more intuitive and efficient.
 
 ## Features
 - Supports [a large amount of file formats](https://exiftool.org/#supported), including .JPG, .NEF, .MOV, .CR3, and most other camera footages. 
@@ -54,7 +54,7 @@ Z Viewer provides a simple and modern graphic user interface, allowing users to 
     <p align="center">
     <img src="assets/damaged.png" width="300">
     </p>
-  Create shortcuts or links of above items and put them in Desktop or other locations for quick access. Avoid moving the executable file out from its original directory. <br>
+  Create shortcuts or links of above items and put them in Desktop or other locations for quick access. Avoid moving the executable file out from its original directory. 
 
   Some useful tips: 
   - When importing multiple files, the application may freeze for a while.
@@ -68,16 +68,16 @@ Z Viewer provides a simple and modern graphic user interface, allowing users to 
   |Windows version|“…\ZViewer\toolsˮ|
   |Mac OS versions|“…/ZViewer.app/Contents/Resources/toolsˮ|
   
-  For a self-compiled Z Viewer program, users need to manually put a copy of ExifTool in tools directory. <br>
+  For a self-compiled Z Viewer program, users need to manually put a copy of ExifTool in tools directory. 
   Users can also upgrade the ExifTool program by replacing its files in tools directory with newer releases from [the official website](https://exiftool.org/).
 
-  When Z Viewer is unable to locate the built-in ExifTool, it will try using ExifTool from the system PATH, if exists, as a fallback. <br>
+  When Z Viewer is unable to locate the built-in ExifTool, it will try using ExifTool from the system PATH, if exists, as a fallback. 
 
 ## Technical Overview
-  This part is purposed as notes for the project’s future development. Although it is made public along with the rest of the project repository, I highly doubt anyone should self-torture by reading it, given its length and tediousness. If you are bored enough, just like me, and want to dive deeper into the technical details of this project, here is where we start. <br>
+  This part is purposed as notes for the project’s future development. Although it is made public along with the rest of the project repository, I highly doubt anyone should self-torture by reading it, given its length and tediousness. If you are bored enough, just like me, and want to dive deeper into the technical details of this project, here is where we start. 
 
 #### Design and Prototype
-  The core idea behind the Z Viewer project is to create a modern, simple, and reliable tool for viewing metadata. The basic framework of UI, which consists of File Thumbnails List on the left, and Info Panel on the right, is decided before building the minimum viable product. After that, a design prototype is drawn. Flat visual style and color scheme of crimson and dark grey are chosen. Because metadata already carries a high density of textual information, we chose to replace text with icons wherever possible in the user interface. <br>
+  The core idea behind the Z Viewer project is to create a modern, simple, and reliable tool for viewing metadata. The basic framework of UI, which consists of File Thumbnails List on the left, and Info Panel on the right, is decided before building the minimum viable product. After that, a design prototype is drawn. Flat visual style and color scheme of crimson and dark grey are chosen. Because metadata already carries a high density of textual information, we chose to replace text with icons wherever possible in the user interface. 
 
   <p align="center">
     <img src="assets/comparisons.png" width="1000">
@@ -96,13 +96,13 @@ The Z Viewer application consists of 3 major parts in development: Data Pipeline
   Backend class is the interface of communication to the QML frontend. It also stores and manages objects of imported data. To ensure maintainability, all Q_PROPERTY and Q_INVOKABLE exposed to the QML frontend are consolidated into the Backend class, instead of directly exposing other class methods. <br>
   Because QML frontend relies on List Models to display lists of items, multiple subclasses of QAbstractListModel are implemented. ExifModel stores the metadata in full. It also contains the methods of searching for the basic info (such as ISO and aperture) displayed in the Bottom Panel. This is implemented with hash searching to achieve minimal time complexity.  ExifModel objects also contain all the information required to rebuild other frontend models.  ExifGroupsModel and EntryListModel objects are constructed from ExifModel object data. ExifGroupsModel contains multiple EntryListModel, each representing a group of metadata, for Info Panel display. ExifGroupsModel also keeps track of the folding status of each group’s Collapsed Panel.  These models store information on a single file level and are stored in ExifFileInfo struct. A vector of ExifFileInfo (ExifList) is stored as private member of Backend class. <br>
   FileListModel stores the information on the file list level, which is all imported files in current session. Its purpose is for the frontend thumbnail panel. It can be reconstructed from ExifList. <br>
-  Keyword searching functions are implemented with the ExifProxyModel class, which is inherited from the QSortFilterProxyModel class. It is a single instance stored in Backend class and always linked to the ExifModel of current file. <br>
+  Keyword searching functions are implemented with the ExifProxyModel class, which is inherited from the QSortFilterProxyModel class. It is a single instance stored in Backend class and always linked to the ExifModel of current file. 
 
 #### Thumbnail Pipelines
 
   To achieve maximum file format compatibility, Z Viewer uses the thumbnail API provided by the operating system to load thumbnails in the File List. A virtual base class ThumbProvider is first implemented for cross-platform compatibility, and the implementations for platform-specific ThumbProvider subclasses are inherited from it. <br>
   The thumbnail pipelines for Windows system are based on IShellItemImageFactory. It requests HBITMAP object from the system API and converts it to QImage and then saves it to the cache folder on local disk. Because COM must run on the same thread, it is initialized in every function call instead of one fixed instance for all. <br>
-  The thumbnail pipelines for Mac OS are based on QuickLookThumbnailing. Its core implementation is Objective-C++, written in a separate MacQLThumbnail file from MacThumbProvider class. <br>
+  The thumbnail pipelines for Mac OS are based on QuickLookThumbnailing. Its core implementation is Objective-C++, written in a separate MacQLThumbnail file from MacThumbProvider class. 
 
 #### UI Modules
 
@@ -133,4 +133,5 @@ Commercial use of Z Viewer or derivative works is prohibited without prior writt
 
 
   For commercial licensing inquiries, please contact us by [submitting an issue](https://github.com/sdzzps/Z-Viewer/issues). 
+
 
